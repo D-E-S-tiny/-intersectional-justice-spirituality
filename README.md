@@ -6,69 +6,40 @@ This site shares teachings, practices, and resources for those walking the path 
 
 ---
 
-## 🌱 Mission Statement
+## ✨ Mission Statement
 
-Intersectional Justice Spirituality centers collective liberation, ancestral wisdom, and care for the Earth.  
-We believe healing and justice are inseparable, and we welcome all who seek to co-create a more just, loving world.
+Intersectional Justice Spirituality centers collective liberation, ancestral wisdom, and care for the Earth. We believe healing and justice are inseparable and welcome all who seek to co-create a more just, loving world.
 
 ---
 
-## 🚀 Getting Started
+## 🌱 Purpose
 
-### 1. Clone the repository
+This work is rooted in spiritual resistance to systems of domination and extraction. It is not meant for corporate co-option, for-profit use, or commodification. Please respect the spirit of this offering and do not republish or use it for commercial gain.
+
+---
+
+## 🛡️ License
+
+This work is licensed under a  
+**Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).**  
+[View license details →](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+**You may:**
+- Share freely with attribution
+- Use for personal, educational, or community-based purposes
+
+**You may not:**
+- Use this material for commercial purposes
+- Modify, remix, or build upon it without express permission
+
+---
+
+## 🛠️ Installation (for Developers)
 
 ```bash
 git clone https://github.com/D-E-S-tiny/intersectional-justice-spirituality.git
 cd intersectional-justice-spirituality
-```
-
-### 2. Install dependencies
-
-If using Node.js:
-
-```bash
 npm install
-```
-
-### 3. Run the development server
-
-```bash
-npm run dev
-```
-
-Then open your browser at:
-
-```
-http://localhost:3000
-```
-
-You should see the site running locally.
-
----
-
-## 🧩 Project Structure
-
-```
-/
-├── public/             # Static assets (images, favicon, etc.)
-├── src/                # Site code (HTML/CSS/JS or framework files)
-├── .gitignore
-├── LICENSE
-├── README.md
-├── package.json
-└── netlify.toml        # Netlify deployment config (optional)
-```
-
----
-
-## 🌍 Deployment
-
-This site is deployed using [Netlify](https://netlify.com).  
-Each push to the `main` branch will automatically redeploy the site.
-
-To preview it locally:
-
-```bash
 npm run dev
 ```
 
@@ -76,20 +47,13 @@ npm run dev
 
 ## 🤝 Contributing
 
-We welcome contributions!  
-Please see the upcoming [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to submit ideas, code, or resources.
-
-You can also open issues for bugs, feedback, or suggestions.
+This project is community-rooted but spiritually protected.  
+If you feel called to contribute, please contact us first or open a respectful issue or pull request.
 
 ---
 
-## 🪷 License
+## 🌍 Connect
 
-This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute this software with proper attribution.
+Questions or intentions to collaborate?  
+Reach out with sincerity: [you@example.com]
 
----
-
-## ✨ Gratitude
-
-With reverence for ancestors, land, spirit, and all beings working toward justice and healing.
