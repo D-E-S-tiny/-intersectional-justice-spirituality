@@ -55,5 +55,5 @@ If you feel called to contribute, please contact us first or open a respectful i
 ## 🌍 Connect
 
 Questions or intentions to collaborate?  
-Reach out with sincerity: [you@example.com]
+Reach out with sincerity.
 
