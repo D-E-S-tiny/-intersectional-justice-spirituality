@@ -15,74 +15,59 @@
         .playfair {
             font-family: 'Playfair Display', serif;
         }
-        
         .cormorant {
             font-family: 'Cormorant Garamond', serif;
         }
-        
         .main-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #059669 50%, #7c3aed 100%);
         }
-        
         .earth-gradient {
             background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
         }
-        
         .forest-green { color: #065f46; }
         .mustard-gold { color: #d97706; }
         .clay-red { background-color: #dc2626; }
         .cream-white { color: #fef3c7; }
         .cream-bg { background-color: rgba(254, 243, 199, 0.9); }
-        
         .ghibli-forest {
             background: linear-gradient(135deg, #064e3b 0%, #065f46 25%, #047857 50%, #059669 75%, #10b981 100%);
             position: relative;
         }
-        
         .sunrise-gradient {
             background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #451a03 100%);
         }
-        
         .button-glow {
             box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
             animation: glow 2s ease-in-out infinite alternate;
         }
-        
         @keyframes glow {
             from { box-shadow: 0 0 20px rgba(220, 38, 38, 0.5); }
             to { box-shadow: 0 0 30px rgba(220, 38, 38, 0.8); }
         }
-        
         .card-hover {
             transition: all 0.3s ease;
         }
-        
         .card-hover:hover {
             transform: translateY(-2px);
         }
-        
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-        
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
         }
-        
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.8s ease forwards;
         }
-        
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
         .book-spine {
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -91,12 +76,10 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
         .book-spine:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        
         .modal {
             display: none;
             position: fixed;
@@ -107,7 +90,6 @@
             height: 100%;
             background-color: rgba(0,0,0,0.8);
         }
-        
         .modal-content {
             background-color: #374151;
             margin: 5% auto;
@@ -117,7 +99,6 @@
             max-width: 600px;
             position: relative;
         }
-        
         .close {
             color: #aaa;
             float: right;
@@ -125,11 +106,9 @@
             font-weight: bold;
             cursor: pointer;
         }
-        
         .close:hover {
             color: #fff;
         }
-        
         .scroll-to-top {
             position: fixed;
             bottom: 20px;
@@ -144,7 +123,6 @@
             display: none;
             animation: pulse 2s infinite;
         }
-        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
@@ -171,6 +149,8 @@
                         <a href="#teachings" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Teachings</a>
                         <a href="#vision" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Vision</a>
                         <a href="#blog" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <!-- Added Contact link -->
+                        <a href="#footer" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
                 <button class="md:hidden text-gray-300 hover:text-green-400" onclick="toggleMobileMenu()">
@@ -190,6 +170,7 @@
                 <a href="#teachings" class="block px-3 py-2 text-gray-300 hover:text-green-400">Teachings</a>
                 <a href="#vision" class="block px-3 py-2 text-gray-300 hover:text-green-400">Vision</a>
                 <a href="#blog" class="block px-3 py-2 text-gray-300 hover:text-green-400">Blog</a>
+                <a href="#footer" class="block px-3 py-2 text-gray-300 hover:text-green-400">Contact</a>
             </div>
         </div>
     </nav>
@@ -767,7 +748,8 @@
                 <div class="bg-slate-800 rounded-lg p-8 mb-4">
                     <div class="text-6xl mb-4">🎥</div>
                     <h4 class="text-xl font-semibold text-white mb-2">Introduction to Intersectional Justice Spirituality</h4>
-                    <p class="text-gray-300 text-sm">A 15-minute overview of our path and practices</p>
+                    <!-- Changed text here -->
+                    <p class="text-gray-300 text-sm">A short overview of our path and practices</p>
                 </div>
                 <!-- Replace button with video embed -->
                 <div class="relative" style="padding-top:56.25%"> <!-- 16:9 aspect ratio -->
@@ -778,7 +760,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-12">
+    <footer id="footer" class="bg-slate-900 text-white py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
                 <div>
@@ -807,7 +789,7 @@
                         <li><a href="#teachings" class="hover:text-green-400 transition-colors">Teachings</a></li>
                         <li><a href="#vision" class="hover:text-green-400 transition-colors">Vision</a></li>
                         <li><a href="#blog" class="hover:text-green-400 transition-colors">Blog</a></li>
-                        <li><a href="#" class="hover:text-green-400 transition-colors">Contact</a></li>
+                        <li><a href="#footer" class="hover:text-green-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 
