@@ -769,7 +769,7 @@
                     <h4 class="text-xl font-semibold text-white mb-2">Introduction to Intersectional Justice Spirituality</h4>
                     <p class="text-gray-300 text-sm">A 15-minute overview of our path and practices</p>
                 </div>
-                <button class="bg-green-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
+                <button class="bg-green-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]" onclick="playVideo()">
                     ▶️ Watch Video
                 </button>
             </div>
@@ -838,6 +838,16 @@
         <div class="modal-content">
             <span class="close" onclick="closeBookModal()">&times;</span>
             <div id="modalContent"></div>
+        </div>
+    </div>
+    
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <div class="relative" style="padding-top:56.25%"> <!-- 16:9 aspect ratio -->
+                <iframe id="videoIframe" class="absolute inset-0 w-full h-full" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
@@ -957,6 +967,18 @@
             document.getElementById('bookModal').style.display = 'none';
         }
         
+        function playVideo() {
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = "https://drive.google.com/file/d/1ifm_z9tLli92KuvMUXDsTQJQAHMgE9SP/preview";
+            document.getElementById('videoModal').style.display = 'block';
+        }
+        
+        function closeVideoModal() {
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = "";
+            document.getElementById('videoModal').style.display = 'none';
+        }
+        
         // Show/hide scroll to top button
         window.onscroll = function() {
             const scrollBtn = document.getElementById('scrollBtn');
@@ -970,8 +992,12 @@
         // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('bookModal');
+            const videoModal = document.getElementById('videoModal');
             if (event.target == modal) {
                 modal.style.display = 'none';
+            }
+            if (event.target == videoModal) {
+                closeVideoModal();
             }
         };
         
@@ -991,8 +1017,5 @@
             });
         });
     </script>
-<script>
-  // Optional: load external scripts if needed
-</script>
 </body>
 </html>
