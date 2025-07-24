@@ -367,7 +367,7 @@
             <li>• Grief and joy rituals</li>
             <li>• Liberation reading</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
+          <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center download-btn">
             📄 Download PDF Guide
           </a>
         </div>
@@ -383,7 +383,7 @@
             <li>• Shared contemplative practice</li>
             <li>• Household liberation discussions</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center download-btn">
             📄 Download PDF Guide
           </a>
         </div>
@@ -399,7 +399,7 @@
             <li>• Collective healing ceremonies</li>
             <li>• Action planning rituals</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center download-btn">
             📄 Download PDF Guide
           </a>
         </div>
@@ -415,7 +415,7 @@
             <li>• Mutual aid days</li>
             <li>• Community healing circles</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
+          <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center download-btn">
             📄 Download PDF Guide
           </a>
         </div>
@@ -966,6 +966,18 @@
         if (!mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
         }
+      });
+    });
+
+    // Set all "Download PDF Guide" buttons in "Living the Path: Practices & Rituals" section to the desired green color
+    document.addEventListener('DOMContentLoaded', () => {
+      const downloadButtons = document.querySelectorAll('#practices a.download-btn');
+      downloadButtons.forEach(btn => {
+        btn.classList.remove('bg-green-600', 'bg-green-800'); // Remove existing background classes
+        // Add desired light green background
+        btn.classList.add('bg-green-600');
+        // Optional: ensure hover remains consistent
+        // or customize further if needed
       });
     });
   </script>
