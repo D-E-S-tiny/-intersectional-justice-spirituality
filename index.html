@@ -209,49 +209,61 @@
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Creation & Cosmology -->
         <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">🌱</span>
             <h3 class="text-2xl font-semibold text-white">Creation & Cosmology</h3>
           </div>
-          <p class="text-gray-300 text-base mb-4 leading-relaxed">"In the beginning, there was rupture — Earth torn by greed, people scattered by oppression. Now we return to reweave what was broken."</p>
-          <a href="https://drive.google.com/uc?export=download&id=1Ndhw1G0BtNMu5S2RTJ6Q4iqUqcftpPH3" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-            ⭐️ Download PDF Guide
-          </a>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"The universe is material, interconnected, and sacred. No mysticism — the unknown is approached through scientific discovery and curiosity. We are threads in a larger tapestry, each life a contribution to Earth’s healing. Creation is ongoing — we are co-creators in shaping the future."</p>
+          <button onclick="showBeliefModal('creation')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+            Read More
+          </button>
         </div>
+        <!-- Knowledge & Truth -->
         <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">📘</span>
             <h3 class="text-2xl font-semibold text-white">Knowledge & Truth</h3>
           </div>
-          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Truth emerges through lived experience, ancestral wisdom, and reflection—rejecting mysticism while honoring reverence for the natural world."</p>
-          <a href="https://drive.google.com/uc?export=download&id=1Ebcvta_piwf2Qh1meDvBKM-i51QcXsFV" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-            ⭐️ Download PDF Guide
-          </a>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Truth arises through critical reflection, material analysis, and collective experience. Ancestral knowledge, land wisdom, and lived experience are valid epistemologies. Rejects mysticism but welcomes reverence and awe for the natural world."</p>
+          <button onclick="showBeliefModal('knowledge')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+            Read More
+          </button>
         </div>
+        <!-- Soul & Humanity -->
         <div class="bg-slate-700 rounded-lg p-6">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">🌿</span>
             <h3 class="text-2xl font-semibold text-white">Soul & Humanity</h3>
           </div>
-          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Humans are shaped by systems, not sin. Our souls—living threads in Earth's tapestry—grow toward collective healing."</p>
-          <a href="https://drive.google.com/uc?export=download&id=1vZpmKOCIE45ahBP7WaR3YV4m6qWEnxwD" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-            ⭐️ Download PDF Guide
-          </a>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Humans are inherently good and shaped by systems, not sin. The “soul” is not immortal but a living thread in community, struggle, and the Earth. We evolve toward collective healing, liberation, and planetary balance."</p>
+          <button onclick="showBeliefModal('soul')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+            Read More
+          </button>
         </div>
+        <!-- Justice & Liberation -->
         <div class="bg-slate-700 rounded-lg p-6">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">⚖️</span>
             <h3 class="text-2xl font-semibold text-white">Justice & Liberation</h3>
           </div>
-          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Justice is sacred. Real liberation demands intersectional, economic, and ecological transformation rooted in love."</p>
-          <a href="https://drive.google.com/uc?export=download&id=1yMXnkMdupCf1_r3G-aX1-RpPsbzysG9J" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-            ⭐️ Download PDF Guide
-          </a>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Justice is sacred. No liberation without intersectional, ecological, and economic justice. Root Values: Mutual care, Environmental stewardship, Collective accountability, Nonviolence within the movement, Sacred resistance against oppressive systems."</p>
+          <button onclick="showBeliefModal('justice')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm">
+            Read More
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- The Modal Content Container for Beliefs -->
+  <div id="beliefModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBeliefModal()">&times;</span>
+      <div id="beliefModalContent" class="mt-4"></div>
+    </div>
+  </div>
 
   <!-- What We Resist Section -->
   <section id="resistance" class="py-12 bg-slate-900">
@@ -786,6 +798,14 @@
     </div>
   </div>
 
+  <!-- Beliefs Modal for detailed texts -->
+  <div id="beliefsDetailModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBeliefsDetailModal()">&times;</span>
+      <div id="beliefsDetailContent" class="mt-4 px-4"></div>
+    </div>
+  </div>
+
   <script>
     // Toggle mobile menu
     function toggleMobileMenu() {
@@ -844,7 +864,45 @@
       }
     }
 
-    // Open Book Modal
+    // Show Beliefs Modal with detailed text
+    function showBeliefModal(key) {
+      const modal = document.getElementById('beliefsDetailModal');
+      const contentDiv = document.getElementById('beliefsDetailContent');
+      let heading = '';
+      let reference = '';
+      let explanation = '';
+      
+      if (key === 'creation') {
+        heading = 'Creation & Cosmology';
+        reference = 'Referencing: David Harvey, Cornel West, Vine Deloria Jr., Sylvia Wynter';
+        explanation = 'The universe is material, interconnected, and sacred. No mysticism — the unknown is approached through scientific discovery and curiosity. We are threads in a larger tapestry, each life a contribution to Earth’s healing. Creation is ongoing — we are co-creators in shaping the future.';
+      } else if (key === 'knowledge') {
+        heading = 'Knowledge & Truth';
+        reference = 'Referencing: Patricia Hill Collins, bell hooks, Kim Crenshaw, Indigenous scholars';
+        explanation = 'Truth arises through critical reflection, material analysis, and collective experience. Ancestral knowledge, land wisdom, and lived experience are valid epistemologies. Rejects mysticism but welcomes reverence and awe for the natural world.';
+      } else if (key === 'soul') {
+        heading = 'Soul & Humanity';
+        reference = 'Referencing: Ubuntu philosophy, Fanon, Angela Davis';
+        explanation = 'Humans are inherently good and shaped by systems, not sin. The “soul” is not immortal but a living thread in community, struggle, and the Earth. We evolve toward collective healing, liberation, and planetary balance.';
+      } else if (key === 'justice') {
+        heading = 'Justice & Liberation';
+        reference = 'Referencing: Liberation Theology, Naomi Klein, Audre Lorde';
+        explanation = 'Justice is sacred. No liberation without intersectional, ecological, and economic justice. Root Values: Mutual care, Environmental stewardship, Collective accountability, Nonviolence within the movement, Sacred resistance against oppressive systems.';
+      }
+
+      contentDiv.innerHTML = `
+        <h2 class="text-2xl font-bold text-white mb-4">${heading}</h2>
+        <p class="mb-2 text-green-300 font-semibold">${reference}</p>
+        <p class="text-gray-300">${explanation}</p>
+      `;
+      modal.style.display = 'block';
+    }
+
+    function closeBeliefsDetailModal() {
+      document.getElementById('beliefsDetailModal').style.display = 'none';
+    }
+
+    // Book Modal functions
     function openBookModal(category) {
       const modal = document.getElementById('bookModal');
       const content = document.getElementById('modalContent');
@@ -945,11 +1003,15 @@
     window.onclick = function(event) {
       const modal = document.getElementById('bookModal');
       const blogModal = document.getElementById('blogModal');
+      const beliefsModal = document.getElementById('beliefModal');
       if (event.target == modal) {
         modal.style.display = 'none';
       }
       if (event.target == blogModal) {
         closeBlogModal();
+      }
+      if (event.target == beliefsModal) {
+        closeBeliefsDetailModal();
       }
     };
 
@@ -969,17 +1031,8 @@
       });
     });
 
-    // Set all "Download PDF Guide" buttons in "Living the Path: Practices & Rituals" section to the desired green color
-    document.addEventListener('DOMContentLoaded', () => {
-      const downloadButtons = document.querySelectorAll('#practices a.download-btn');
-      downloadButtons.forEach(btn => {
-        btn.classList.remove('bg-green-600', 'bg-green-800'); // Remove existing background classes
-        // Add desired light green background
-        btn.classList.add('bg-green-600');
-        // Optional: ensure hover remains consistent
-        // or customize further if needed
-      });
-    });
+    // Example: no additional code needed for PDF download links as they are unchanged
+
   </script>
 </body>
 </html>
