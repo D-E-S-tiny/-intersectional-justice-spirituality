@@ -1,999 +1,972 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-slate-900 text-white font-inter">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intersectional Justice Spirituality</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        .cormorant {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .main-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #059669 50%, #7c3aed 100%);
-        }
-        .earth-gradient {
-            background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
-        }
-        .forest-green { color: #065f46; }
-        .mustard-gold { color: #d97706; }
-        .clay-red { background-color: #dc2626; }
-        .cream-white { color: #fef3c7; }
-        .cream-bg { background-color: rgba(254, 243, 199, 0.9); }
-        .ghibli-forest {
-            background: linear-gradient(135deg, #064e3b 0%, #065f46 25%, #047857 50%, #059669 75%, #10b981 100%);
-            position: relative;
-        }
-        .sunrise-gradient {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #451a03 100%);
-        }
-        .button-glow {
-            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(220, 38, 38, 0.5); }
-            to { box-shadow: 0 0 30px rgba(220, 38, 38, 0.8); }
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-2px);
-        }
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .book-spine {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            height: 200px;
-            width: 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .book-spine:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-        }
-        .modal-content {
-            background-color: #374151;
-            margin: 5% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            position: relative;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #fff;
-        }
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #059669;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            display: none;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intersectional Justice Spirituality</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .cormorant {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .main-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #059669 50%, #7c3aed 100%);
+    }
+    .earth-gradient {
+      background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
+    }
+    .forest-green { color: #065f46; }
+    .mustard-gold { color: #d97706; }
+    .clay-red { background-color: #dc2626; }
+    .cream-white { color: #fef3c7; }
+    .cream-bg { background-color: rgba(254, 243, 199, 0.9); }
+    .ghibli-forest {
+      background: linear-gradient(135deg, #064e3b 0%, #065f46 25%, #047857 50%, #059669 75%, #10b981 100%);
+      position: relative;
+    }
+    .sunrise-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #451a03 100%);
+    }
+    .button-glow {
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(220, 38, 38, 0.5); }
+      to { box-shadow: 0 0 30px rgba(220, 38, 38, 0.8); }
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+    }
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .book-spine {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      height: 200px;
+      width: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .book-spine:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      background-color: #374151;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #fff;
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #059669;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      display: none;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+    }
+  </style>
 </head>
 <body class="bg-slate-800 text-white">
-    <!-- Navigation -->
-    <nav class="bg-slate-900 shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-green-400">
-                        ✊ IJS
-                    </div>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#home" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="#beliefs" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Beliefs</a>
-                        <a href="#resistance" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Resist</a>
-                        <a href="#practices" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Practices</a>
-                        <a href="#teachings" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Teachings</a>
-                        <a href="#vision" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Vision</a>
-                        <a href="#blog" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Blog</a>
-                        <!-- Added Contact link -->
-                        <a href="#footer" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Contact</a>
-                    </div>
-                </div>
-                <button class="md:hidden text-gray-300 hover:text-green-400" onclick="toggleMobileMenu()">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
+  <!-- Navigation -->
+  <nav class="bg-slate-900 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="text-2xl font-bold text-green-400">
+            ✊ IJS
+          </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-green-400">Home</a>
-                <a href="#beliefs" class="block px-3 py-2 text-gray-300 hover:text-green-400">Beliefs</a>
-                <a href="#resistance" class="block px-3 py-2 text-gray-300 hover:text-green-400">Resist</a>
-                <a href="#practices" class="block px-3 py-2 text-gray-300 hover:text-green-400">Practices</a>
-                <a href="#teachings" class="block px-3 py-2 text-gray-300 hover:text-green-400">Teachings</a>
-                <a href="#vision" class="block px-3 py-2 text-gray-300 hover:text-green-400">Vision</a>
-                <a href="#blog" class="block px-3 py-2 text-gray-300 hover:text-green-400">Blog</a>
-                <a href="#footer" class="block px-3 py-2 text-gray-300 hover:text-green-400">Contact</a>
-            </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-6">
+            <a href="#home" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Home</a>
+            <a href="#beliefs" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Beliefs</a>
+            <a href="#resistance" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Resist</a>
+            <a href="#practices" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Practices</a>
+            <a href="#teachings" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Teachings</a>
+            <a href="#vision" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Vision</a>
+            <a href="#blog" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Blog</a>
+            <a href="#footer" class="text-gray-300 hover:text-green-400 px-2 py-2 text-sm font-medium transition-colors">Contact</a>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="main-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-30">
-            <div class="floating absolute top-20 left-10 text-4xl">🍃</div>
-            <div class="floating absolute top-40 right-20 text-3xl" style="animation-delay: -2s;">✨</div>
-            <div class="floating absolute bottom-40 left-20 text-5xl" style="animation-delay: -4s;">🌿</div>
-            <div class="floating absolute bottom-20 right-10 text-2xl" style="animation-delay: -1s;">🦋</div>
-            <div class="floating absolute top-60 left-1/3 text-3xl" style="animation-delay: -3s;">🌸</div>
-            <div class="floating absolute top-80 right-1/3 text-4xl" style="animation-delay: -5s;">🍂</div>
-        </div>
-        
-        <div class="text-center z-10 px-4 max-w-6xl mx-auto">
-            <h1 class="text-6xl font-bold mb-8 fade-in text-white">
-                Intersectional Justice Spirituality
-            </h1>
-            <p class="text-2xl mb-8 fade-in text-white font-medium" style="animation-delay: 0.2s;">
-                A Radical Path of Liberation, Earth Centered Faith & Collective Healing
-            </p>
-            <div class="mb-12 fade-in" style="animation-delay: 0.4s;">
-                <button onclick="scrollToSection('beliefs')" class="bg-green-600 text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-colors">
-                    Begin the Journey
-                </button>
-            </div>
-            <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto fade-in" style="animation-delay: 0.6s;">
-                <p class="text-xl text-white font-medium italic">
-                    "This is not just a belief system—it is a movement. A revolution of soul, society, and Earth."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Beliefs Section -->
-    <section id="beliefs" class="py-12 bg-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Our Beliefs 📜
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🌱</span>
-                        <h3 class="text-2xl font-semibold text-white">Creation & Cosmology</h3>
-                    </div>
-                    <p class="text-gray-300 text-base mb-4 leading-relaxed">
-                        "In the beginning, there was rupture — Earth torn by greed, people scattered by oppression. Now we return to reweave what was broken."
-                    </p>
-                    <a href="https://drive.google.com/uc?export=download&id=1Ndhw1G0BtNMu5S2RTJ6Q4iqUqcftpPH3" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-                        ⭐️ Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">📘</span>
-                        <h3 class="text-2xl font-semibold text-white">Knowledge & Truth</h3>
-                    </div>
-                    <p class="text-gray-300 text-base mb-4 leading-relaxed">
-                        "Truth emerges through lived experience, ancestral wisdom, and reflection—rejecting mysticism while honoring reverence for the natural world."
-                    </p>
-                    <a href="https://drive.google.com/uc?export=download&id=1Ebcvta_piwf2Qh1meDvBKM-i51QcXsFV" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-                        ⭐️ Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🌿</span>
-                        <h3 class="text-2xl font-semibold text-white">Soul & Humanity</h3>
-                    </div>
-                    <p class="text-gray-300 text-base mb-4 leading-relaxed">
-                        "Humans are shaped by systems, not sin. Our souls—living threads in Earth's tapestry—grow toward collective healing."
-                    </p>
-                    <a href="https://drive.google.com/uc?export=download&id=1vZpmKOCIE45ahBP7WaR3YV4m6qWEnxwD" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-                        ⭐️ Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">⚖️</span>
-                        <h3 class="text-2xl font-semibold text-white">Justice & Liberation</h3>
-                    </div>
-                    <p class="text-gray-300 text-base mb-4 leading-relaxed">
-                        "Justice is sacred. Real liberation demands intersectional, economic, and ecological transformation rooted in love."
-                    </p>
-                    <a href="https://drive.google.com/uc?export=download&id=1yMXnkMdupCf1_r3G-aX1-RpPsbzysG9J" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
-                        ⭐️ Download PDF Guide
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Resist Section -->
-    <section id="resistance" class="py-12 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    What We Resist 🌿
-                </h2>
-            </div>
-            
-            <div class="space-y-4">
-                <div class="bg-slate-700 rounded-lg overflow-hidden">
-                    <button class="w-full p-4 sm:p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('capitalism')">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-3xl mr-4">🟥</span>
-                                <h3 class="text-2xl font-semibold text-white">Capitalism</h3>
-                            </div>
-                            <span class="text-white text-2xl" id="capitalism-icon">+</span>
-                        </div>
-                    </button>
-                    <div id="capitalism-content" class="hidden px-6 pb-6">
-                        <p class="text-white font-semibold mb-2">Function: "Exploits life for profit."</p>
-                        <p class="text-white mb-2">Impact: "Drives poverty, war, inequality, ecological destruction."</p>
-                        <p class="text-white">Struggles: Worker liberation, decolonization</p>
-                    </div>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg overflow-hidden">
-                    <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('supremacy')">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-3xl mr-4">🤍</span>
-                                <h3 class="text-2xl font-semibold text-white">White Supremacy & Imperialism</h3>
-                            </div>
-                            <span class="text-white text-2xl" id="supremacy-icon">+</span>
-                        </div>
-                    </button>
-                    <div id="supremacy-content" class="hidden px-6 pb-6">
-                        <p class="text-white font-semibold mb-2">Function: "Justifies colonization, borders, racial capitalism."</p>
-                        <p class="text-white mb-2">Impact: "Enforces global hierarchies, anti immigration, policing."</p>
-                        <p class="text-white">Struggles: Indigenous sovereignty, migrant justice</p>
-                    </div>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg overflow-hidden">
-                    <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('patriarchy')">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-3xl mr-4">🏳️‍🌈</span>
-                                <h3 class="text-2xl font-semibold text-white">Patriarchy & Heteronormativity</h3>
-                            </div>
-                            <span class="text-white text-2xl" id="patriarchy-icon">+</span>
-                        </div>
-                    </button>
-                    <div id="patriarchy-content" class="hidden px-6 pb-6">
-                        <p class="text-white font-semibold mb-2">Function: "Enforces binaries and unpaid care."</p>
-                        <p class="text-white mb-2">Impact: "Marginalizes queer/trans lives."</p>
-                        <p class="text-white">Struggles: Queer liberation, reproductive justice</p>
-                    </div>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg overflow-hidden">
-                    <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('ecocide')">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-3xl mr-4">🌱</span>
-                                <h3 class="text-2xl font-semibold text-white">Ecocide</h3>
-                            </div>
-                            <span class="text-white text-2xl" id="ecocide-icon">+</span>
-                        </div>
-                    </button>
-                    <div id="ecocide-content" class="hidden px-6 pb-6">
-                        <p class="text-white font-semibold mb-2">Function: "Treats nature as infinite resource."</p>
-                        <p class="text-white mb-2">Impact: "Climate crisis, land theft, environmental racism."</p>
-                        <p class="text-white">Struggles: Climate justice, eco socialism, land back</p>
-                    </div>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg overflow-hidden">
-                    <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('ableism')">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-3xl mr-4">♿</span>
-                                <h3 class="text-2xl font-semibold text-white">Ableism</h3>
-                            </div>
-                            <span class="text-white text-2xl" id="ableism-icon">+</span>
-                        </div>
-                    </button>
-                    <div id="ableism-content" class="hidden px-6 pb-6">
-                        <p class="text-white font-semibold mb-2">Function: "Devalues lives deemed unproductive."</p>
-                        <p class="text-white mb-2">Impact: "Institutionalization, labor exclusion."</p>
-                        <p class="text-white">Struggles: Disability justice, rest as resistance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Practices & Rituals Section -->
-    <section id="practices" class="py-12 earth-gradient">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Living the Path: Practices & Rituals 🧘
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🌱</span>
-                        <h3 class="text-2xl font-semibold text-white">Personal</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-base mb-6">
-                        <li>• Meditation</li>
-                        <li>• Journaling</li>
-                        <li>• Nature connection</li>
-                        <li>• Grief and joy rituals</li>
-                        <li>• Liberation reading</li>
-                    </ul>
-                    <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
-                        📄 Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🏠</span>
-                        <h3 class="text-2xl font-semibold text-white">Couple / Household</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-base mb-6">
-                        <li>• Weekly justice intention rituals</li>
-                        <li>• Co-regulation walks in nature</li>
-                        <li>• Activism sabbaths</li>
-                        <li>• Shared contemplative practice</li>
-                        <li>• Household liberation discussions</li>
-                    </ul>
-                    <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
-                        📄 Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">👥</span>
-                        <h3 class="text-2xl font-semibold text-white">Small Group</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-base mb-6">
-                        <li>• Story circles</li>
-                        <li>• Confession & recommitment rituals</li>
-                        <li>• Decolonial dreaming practices</li>
-                        <li>• Collective healing ceremonies</li>
-                        <li>• Action planning rituals</li>
-                    </ul>
-                    <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
-                        📄 Download PDF Guide
-                    </a>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🌍</span>
-                        <h3 class="text-2xl font-semibold text-white">Community</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-base mb-6">
-                        <li>• Eco spiritual ceremonies</li>
-                        <li>• Vigils at harm sites</li>
-                        <li>• Intersectional teach ins</li>
-                        <li>• Mutual aid days</li>
-                        <li>• Community healing circles</li>
-                    </ul>
-                    <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
-                        📄 Download PDF Guide
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sacred Teachings Section -->
-    <section id="teachings" class="py-12 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Foundations of Wisdom 📚
-                </h2>
-            </div>
-            
-            <div class="bg-slate-700 rounded-lg p-8">
-                <h3 class="text-2xl font-semibold text-white mb-8 text-center">Sacred Bookshelf</h3>
-                <div class="flex justify-center space-x-2 mb-8">
-                    <div class="book-spine bg-red-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('economic')">
-                        Economic Justice
-                    </div>
-                    <div class="book-spine bg-purple-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('black')">
-                        Black Liberation
-                    </div>
-                    <div class="book-spine bg-pink-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('queer')">
-                        Queer & Feminist
-                    </div>
-                    <div class="book-spine bg-green-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('climate')">
-                        Climate Justice
-                    </div>
-                    <div class="book-spine bg-amber-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('indigenous')">
-                        Indigenous Knowledge
-                    </div>
-                </div>
-                <p class="text-gray-300 text-center">Click on each book to explore key thinkers and readings</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Futures Vision Section -->
-    <section id="vision" class="py-12 main-gradient">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Our Communal Vision 🌍
-                </h2>
-                <p class="text-lg text-amber-100 max-w-4xl mx-auto leading-relaxed">
-                    At the heart of our spiritual path lies a vision of decentralized, directly democratic, eco communal living—a world where abundance, creativity, and cooperative care replace scarcity, hierarchy, and extraction.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-                <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🌞</span>
-                        <h3 class="text-2xl font-semibold text-white">Renewable Energy & Gardens</h3>
-                    </div>
-                    <p class="text-amber-100 text-base">Rooftop gardens and solar panels power our communities with clean energy and fresh food.</p>
-                </div>
-                
-                <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🤝</span>
-                        <h3 class="text-2xl font-semibold text-white">Worker Cooperatives</h3>
-                    </div>
-                    <p class="text-amber-100 text-base">Worker-owned cooperatives and gift economies replace exploitative capitalism.</p>
-                </div>
-                
-                <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🔧</span>
-                        <h3 class="text-2xl font-semibold text-white">Communal Technology</h3>
-                    </div>
-                    <p class="text-amber-100 text-base">Open-source technology, repair cafes, and tool libraries build community resilience.</p>
-                </div>
-                
-                <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-3">🗳️</span>
-                        <h3 class="text-2xl font-semibold text-white">Participatory Governance</h3>
-                    </div>
-                    <p class="text-amber-100 text-base">Circle democracy and mutual accountability guide our collective decisions.</p>
-                </div>
-            </div>
-            
-            <div class="bg-amber-800/70 backdrop-blur-sm rounded-lg p-8 text-center">
-                <p class="text-xl text-amber-100 italic font-medium">
-                    "We prefigure liberation today by building it through mutual aid, eco politics, and artistic resistance."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Justice Creed Section -->
-    <section class="py-12 ghibli-forest relative">
-        <div class="absolute inset-0 opacity-20">
-            <div class="floating absolute top-10 left-10 text-3xl">🌿</div>
-            <div class="floating absolute bottom-10 right-10 text-3xl" style="animation-delay: -3s;">✊</div>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 relative">
-            <div class="bg-slate-800/90 backdrop-blur-sm rounded-lg p-8 border-4 border-green-400">
-                <h2 class="text-4xl font-bold text-white mb-8">
-                    Justice Creed ✊
-                </h2>
-                <div class="space-y-4 text-lg text-green-100">
-                    <p>1. Sacredness of all beings</p>
-                    <p>2. Justice is practice, not ideal</p>
-                    <p>3. No one is disposable</p>
-                    <p>4. Earth is our relative</p>
-                    <p>5. Name systems of oppression</p>
-                    <p>6. Silence in injustice is betrayal</p>
-                    <p>7. Intersectionality is seeing truth</p>
-                    <p>8. Joy, grief, rage are sacred</p>
-                    <p>9. Healing is protest; tenderness is revolutionary</p>
-                    <p>10. Wisdom of ancestors; accountability to unborn</p>
-                    <p>11. The struggle for justice is holy ground</p>
-                    <p>12. I walk this path with courage, humility, and hope</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ethics & FAQ Section -->
-    <section class="py-12 bg-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Living Together, Growing Together ⚖️
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-6">Ethical Commitments</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-3">💬</span>
-                            <span class="text-gray-300">Respectful communication</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-3">🔄</span>
-                            <span class="text-gray-300">Restorative conflict practices</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-3">🕊️</span>
-                            <span class="text-gray-300">Nonviolence in community</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-3">🤝</span>
-                            <span class="text-gray-300">Active participation</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-3">🌱</span>
-                            <span class="text-gray-300">Environmental integrity</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h3>
-                    <div class="space-y-4">
-                        <div class="bg-slate-700 rounded-lg overflow-hidden">
-                            <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('political')">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-white font-medium">Is this too political for a spiritual path?</span>
-                                    <span class="text-white" id="political-icon">+</span>
-                                </div>
-                            </button>
-                            <div id="political-content" class="hidden px-4 pb-4">
-                                <p class="text-white text-sm">True healing meets struggle. Justice-based spirituality is grounded in liberation.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-slate-700 rounded-lg overflow-hidden">
-                            <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('accessible')">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-white font-medium">Is this path accessible or too academic?</span>
-                                    <span class="text-white" id="accessible-icon">+</span>
-                                </div>
-                            </button>
-                            <div id="accessible-content" class="hidden px-4 pb-4">
-                                <p class="text-white text-sm">We translate thinkers through rituals, stories, and shared practice.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-slate-700 rounded-lg overflow-hidden">
-                            <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('divisive')">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-white font-medium">Divisive?</span>
-                                    <span class="text-white" id="divisive-icon">+</span>
-                                </div>
-                            </button>
-                            <div id="divisive-content" class="hidden px-4 pb-4">
-                                <p class="text-white text-sm">No. Intersectionality is how we honor the whole of every person and planet.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Our Community Section -->
-    <section class="py-12 bg-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Join Our Community 🤝
-                </h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Ready to walk this path with others? Connect with fellow seekers, join local circles, and build the beloved community together.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
-                <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
-                    <div class="text-4xl mb-4">🌱</div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Local Circles</h3>
-                    <p class="text-gray-300 text-sm mb-6">Find or start a practice circle in your area for regular gatherings and mutual support.</p>
-                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
-                        Find a Circle
-                    </button>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
-                    <div class="text-4xl mb-4">💬</div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Online Community</h3>
-                    <p class="text-gray-300 text-sm mb-6">Join our digital spaces for daily inspiration, discussion, and connection across distances.</p>
-                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
-                        Join Online
-                    </button>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
-                    <div class="text-4xl mb-4">📚</div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Study Groups</h3>
-                    <p class="text-gray-300 text-sm mb-6">Dive deeper into liberation theology and justice spirituality with guided study.</p>
-                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
-                        Start Studying
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-slate-700 rounded-lg p-8 text-center">
-                <h3 class="text-2xl font-semibold text-white mb-4">Ready to Begin?</h3>
-                <p class="text-gray-300 mb-6">Take the first step on your journey of intersectional justice spirituality.</p>
-                <form class="max-w-md mx-auto space-y-4" onsubmit="handleCommunitySignup(event)">
-                    <input type="text" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="Your name" required>
-                    <input type="email" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="Your email" required>
-                    <select class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" required>
-                        <option value="">I'm interested in...</option>
-                        <option>Local practice circles</option>
-                        <option>Online community</option>
-                        <option>Study groups</option>
-                        <option>All of the above</option>
-                    </select>
-                    <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
-                        Join the Movement ✊
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog & Reflections Section -->
-    <section id="blog" class="py-12 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-8 playfair">
-                    Blog & Reflections 💬
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
-                <div class="bg-slate-700 rounded-lg p-6 card-hover">
-                    <h3 class="text-xl font-semibold text-white mb-4">Grief as a Sacred Gesture</h3>
-                    <p class="text-gray-300 text-sm mb-4">Exploring how grief becomes a pathway to collective healing and justice...</p>
-                    <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm">
-                        Read More →
-                    </button>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6 card-hover">
-                    <h3 class="text-xl font-semibold text-white mb-4">Ritual Walks in Spring</h3>
-                    <p class="text-gray-300 text-sm mb-4">Connecting with the earth's renewal as a practice of personal and political transformation...</p>
-                    <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm">
-                        Read More →
-                    </button>
-                </div>
-                
-                <div class="bg-slate-700 rounded-lg p-6 card-hover">
-                    <h3 class="text-xl font-semibold text-white mb-4">Story Circle: A Trans Liberation Testimony</h3>
-                    <p class="text-gray-300 text-sm mb-4">Witnessing the sacred in stories of resistance and transformation...</p>
-                    <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm">
-                        Read More →
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-slate-700 rounded-lg p-8 text-center">
-                <h3 class="text-2xl font-semibold text-white mb-4">Featured Video</h3>
-                <div class="bg-slate-800 rounded-lg p-8 mb-4">
-                    <div class="text-6xl mb-4">🎥</div>
-                    <h4 class="text-xl font-semibold text-white mb-2">Introduction to Intersectional Justice Spirituality</h4>
-                    <!-- Changed text here -->
-                    <p class="text-gray-300 text-sm">A short overview of our path and practices</p>
-                </div>
-                <!-- Replace button with video embed -->
-                <div class="relative" style="padding-top:56.25%"> <!-- 16:9 aspect ratio -->
-                    <iframe src="https://drive.google.com/file/d/1ifm_z9tLli92KuvMUXDsTQJQAHMgE9SP/preview" frameborder="0" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer" class="bg-slate-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
-                <div>
-                    <div class="text-2xl font-bold mb-4 text-green-400">✊ IJS</div>
-                    <p class="text-gray-300 text-sm mb-4">
-                        A Revolution of Soul, Society, and Earth
-                    </p>
-                    <div class="text-sm text-gray-400">
-                        @IntersectionalSpirituality
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4 text-white">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#home" class="hover:text-green-400 transition-colors">Home</a></li>
-                        <li><a href="#beliefs" class="hover:text-green-400 transition-colors">Beliefs</a></li>
-                        <li><a href="#resistance" class="hover:text-green-400 transition-colors">Resist</a></li>
-                        <li><a href="#practices" class="hover:text-green-400 transition-colors">Practices</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4 text-white">Explore</h4>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li><a href="#teachings" class="hover:text-green-400 transition-colors">Teachings</a></li>
-                        <li><a href="#vision" class="hover:text-green-400 transition-colors">Vision</a></li>
-                        <li><a href="#blog" class="hover:text-green-400 transition-colors">Blog</a></li>
-                        <li><a href="#footer" class="hover:text-green-400 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4 text-white">Newsletter</h4>
-                    <form class="space-y-3" onsubmit="handleNewsletterSignup(event)">
-                        <input type="email" class="w-full px-3 py-3 bg-slate-800 border border-slate-600 rounded text-white text-sm focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="your@email.com" required>
-                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px]">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-700 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2024 Intersectional Justice Spirituality. All rights reserved.</p>
-                <p class="mt-2">Built with love for justice, healing, and liberation. 🌱</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" onclick="scrollToTop()" id="scrollBtn">
-        🏮
-    </button>
-
-    <!-- Book Modals -->
-    <div id="bookModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeBookModal()">&times;</span>
-            <div id="modalContent"></div>
-        </div>
+        <button class="md:hidden text-gray-300 hover:text-green-400" onclick="toggleMobileMenu()">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
-    
-    <!-- Video Modal (not used now, but kept for reference) -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeVideoModal()">&times;</span>
-            <div class="relative" style="padding-top:56.25%"> <!-- 16:9 aspect ratio -->
-                <iframe id="videoIframe" class="absolute inset-0 w-full h-full" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-slate-900 border-t border-slate-700">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-green-400">Home</a>
+        <a href="#beliefs" class="block px-3 py-2 text-gray-300 hover:text-green-400">Beliefs</a>
+        <a href="#resistance" class="block px-3 py-2 text-gray-300 hover:text-green-400">Resist</a>
+        <a href="#practices" class="block px-3 py-2 text-gray-300 hover:text-green-400">Practices</a>
+        <a href="#teachings" class="block px-3 py-2 text-gray-300 hover:text-green-400">Teachings</a>
+        <a href="#vision" class="block px-3 py-2 text-gray-300 hover:text-green-400">Vision</a>
+        <a href="#blog" class="block px-3 py-2 text-gray-300 hover:text-green-400">Blog</a>
+        <a href="#footer" class="block px-3 py-2 text-gray-300 hover:text-green-400">Contact</a>
+      </div>
     </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="home" class="main-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <div class="floating absolute top-20 left-10 text-4xl">🍃</div>
+      <div class="floating absolute top-40 right-20 text-3xl" style="animation-delay: -2s;">✨</div>
+      <div class="floating absolute bottom-40 left-20 text-5xl" style="animation-delay: -4s;">🌿</div>
+      <div class="floating absolute bottom-20 right-10 text-2xl" style="animation-delay: -1s;">🦋</div>
+      <div class="floating absolute top-60 left-1/3 text-3xl" style="animation-delay: -3s;">🌸</div>
+      <div class="floating absolute top-80 right-1/3 text-4xl" style="animation-delay: -5s;">🍂</div>
+    </div>
+    <div class="text-center z-10 px-4 max-w-6xl mx-auto">
+      <h1 class="text-6xl font-bold mb-8 fade-in text-white">Intersectional Justice Spirituality</h1>
+      <p class="text-2xl mb-8 fade-in text-white font-medium" style="animation-delay: 0.2s;">A Radical Path of Liberation, Earth Centered Faith & Collective Healing</p>
+      <div class="mb-12 fade-in" style="animation-delay: 0.4s;">
+        <button onclick="scrollToSection('beliefs')" class="bg-green-600 text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-colors">
+          Begin the Journey
+        </button>
+      </div>
+      <div class="bg-black/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto fade-in" style="animation-delay: 0.6s;">
+        <p class="text-xl text-white font-medium italic">
+          "This is not just a belief system—it is a movement. A revolution of soul, society, and Earth."
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+  <!-- Our Beliefs Section -->
+  <section id="beliefs" class="py-12 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Our Beliefs 📜
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🌱</span>
+            <h3 class="text-2xl font-semibold text-white">Creation & Cosmology</h3>
+          </div>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"In the beginning, there was rupture — Earth torn by greed, people scattered by oppression. Now we return to reweave what was broken."</p>
+          <a href="https://drive.google.com/uc?export=download&id=1Ndhw1G0BtNMu5S2RTJ6Q4iqUqcftpPH3" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
+            ⭐️ Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6 card-hover hover:bg-slate-600 transition-colors">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">📘</span>
+            <h3 class="text-2xl font-semibold text-white">Knowledge & Truth</h3>
+          </div>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Truth emerges through lived experience, ancestral wisdom, and reflection—rejecting mysticism while honoring reverence for the natural world."</p>
+          <a href="https://drive.google.com/uc?export=download&id=1Ebcvta_piwf2Qh1meDvBKM-i51QcXsFV" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
+            ⭐️ Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🌿</span>
+            <h3 class="text-2xl font-semibold text-white">Soul & Humanity</h3>
+          </div>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Humans are shaped by systems, not sin. Our souls—living threads in Earth's tapestry—grow toward collective healing."</p>
+          <a href="https://drive.google.com/uc?export=download&id=1vZpmKOCIE45ahBP7WaR3YV4m6qWEnxwD" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
+            ⭐️ Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">⚖️</span>
+            <h3 class="text-2xl font-semibold text-white">Justice & Liberation</h3>
+          </div>
+          <p class="text-gray-300 text-base mb-4 leading-relaxed">"Justice is sacred. Real liberation demands intersectional, economic, and ecological transformation rooted in love."</p>
+          <a href="https://drive.google.com/uc?export=download&id=1yMXnkMdupCf1_r3G-aX1-RpPsbzysG9J" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors text-sm">
+            ⭐️ Download PDF Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Resist Section -->
+  <section id="resistance" class="py-12 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          What We Resist 🌿
+        </h2>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-slate-700 rounded-lg overflow-hidden">
+          <button class="w-full p-4 sm:p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('capitalism')">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <span class="text-3xl mr-4">🟥</span>
+                <h3 class="text-2xl font-semibold text-white">Capitalism</h3>
+              </div>
+              <span class="text-white text-2xl" id="capitalism-icon">+</span>
+            </div>
+          </button>
+          <div id="capitalism-content" class="hidden px-6 pb-6">
+            <p class="text-white font-semibold mb-2">Function: "Exploits life for profit."</p>
+            <p class="text-white mb-2">Impact: "Drives poverty, war, inequality, ecological destruction."</p>
+            <p class="text-white">Struggles: Worker liberation, decolonization</p>
+          </div>
+        </div>
+        <div class="bg-slate-700 rounded-lg overflow-hidden">
+          <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('supremacy')">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <span class="text-3xl mr-4">🤍</span>
+                <h3 class="text-2xl font-semibold text-white">White Supremacy & Imperialism</h3>
+              </div>
+              <span class="text-white text-2xl" id="supremacy-icon">+</span>
+            </div>
+          </button>
+          <div id="supremacy-content" class="hidden px-6 pb-6">
+            <p class="text-white font-semibold mb-2">Function: "Justifies colonization, borders, racial capitalism."</p>
+            <p class="text-white mb-2">Impact: "Enforces global hierarchies, anti immigration, policing."</p>
+            <p class="text-white">Struggles: Indigenous sovereignty, migrant justice</p>
+          </div>
+        </div>
+        <div class="bg-slate-700 rounded-lg overflow-hidden">
+          <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('patriarchy')">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <span class="text-3xl mr-4">🏳️‍🌈</span>
+                <h3 class="text-2xl font-semibold text-white">Patriarchy & Heteronormativity</h3>
+              </div>
+              <span class="text-white text-2xl" id="patriarchy-icon">+</span>
+            </div>
+          </button>
+          <div id="patriarchy-content" class="hidden px-6 pb-6">
+            <p class="text-white font-semibold mb-2">Function: "Enforces binaries and unpaid care."</p>
+            <p class="text-white mb-2">Impact: "Marginalizes queer/trans lives."</p>
+            <p class="text-white">Struggles: Queer liberation, reproductive justice</p>
+          </div>
+        </div>
+        <div class="bg-slate-700 rounded-lg overflow-hidden">
+          <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('ecocide')">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <span class="text-3xl mr-4">🌱</span>
+                <h3 class="text-2xl font-semibold text-white">Ecocide</h3>
+              </div>
+              <span class="text-white text-2xl" id="ecocide-icon">+</span>
+            </div>
+          </button>
+          <div id="ecocide-content" class="hidden px-6 pb-6">
+            <p class="text-white font-semibold mb-2">Function: "Treats nature as infinite resource."</p>
+            <p class="text-white mb-2">Impact: "Climate crisis, land theft, environmental racism."</p>
+            <p class="text-white">Struggles: Climate justice, eco socialism, land back</p>
+          </div>
+        </div>
+        <div class="bg-slate-700 rounded-lg overflow-hidden">
+          <button class="w-full p-6 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('ableism')">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <span class="text-3xl mr-4">♿</span>
+                <h3 class="text-2xl font-semibold text-white">Ableism</h3>
+              </div>
+              <span class="text-white text-2xl" id="ableism-icon">+</span>
+            </div>
+          </button>
+          <div id="ableism-content" class="hidden px-6 pb-6">
+            <p class="text-white font-semibold mb-2">Function: "Devalues lives deemed unproductive."</p>
+            <p class="text-white mb-2">Impact: "Institutionalization, labor exclusion."</p>
+            <p class="text-white">Struggles: Disability justice, rest as resistance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practices & Rituals Section -->
+  <section id="practices" class="py-12 earth-gradient">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Living the Path: Practices & Rituals 🧘
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🌱</span>
+            <h3 class="text-2xl font-semibold text-white">Personal</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300 text-base mb-6">
+            <li>• Meditation</li>
+            <li>• Journaling</li>
+            <li>• Nature connection</li>
+            <li>• Grief and joy rituals</li>
+            <li>• Liberation reading</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
+            📄 Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🏠</span>
+            <h3 class="text-2xl font-semibold text-white">Couple / Household</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300 text-base mb-6">
+            <li>• Weekly justice intention rituals</li>
+            <li>• Co-regulation walks in nature</li>
+            <li>• Activism sabbaths</li>
+            <li>• Shared contemplative practice</li>
+            <li>• Household liberation discussions</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
+            📄 Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">👥</span>
+            <h3 class="text-2xl font-semibold text-white">Small Group</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300 text-base mb-6">
+            <li>• Story circles</li>
+            <li>• Confession & recommitment rituals</li>
+            <li>• Decolonial dreaming practices</li>
+            <li>• Collective healing ceremonies</li>
+            <li>• Action planning rituals</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
+            📄 Download PDF Guide
+          </a>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🌍</span>
+            <h3 class="text-2xl font-semibold text-white">Community</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300 text-base mb-6">
+            <li>• Eco spiritual ceremonies</li>
+            <li>• Vigils at harm sites</li>
+            <li>• Intersectional teach ins</li>
+            <li>• Mutual aid days</li>
+            <li>• Community healing circles</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
+            📄 Download PDF Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Teachings Section -->
+  <section id="teachings" class="py-12 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Foundations of Wisdom 📚
+        </h2>
+      </div>
+      <div class="bg-slate-700 rounded-lg p-8">
+        <h3 class="text-2xl font-semibold text-white mb-8 text-center">Sacred Bookshelf</h3>
+        <div class="flex justify-center space-x-2 mb-8">
+          <div class="book-spine bg-red-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('economic')">
+            Economic Justice
+          </div>
+          <div class="book-spine bg-purple-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('black')">
+            Black Liberation
+          </div>
+          <div class="book-spine bg-pink-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('queer')">
+            Queer & Feminist
+          </div>
+          <div class="book-spine bg-green-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('climate')">
+            Climate Justice
+          </div>
+          <div class="book-spine bg-amber-600 text-white p-2 rounded flex items-center justify-center text-sm font-bold" onclick="openBookModal('indigenous')">
+            Indigenous Knowledge
+          </div>
+        </div>
+        <p class="text-gray-300 text-center">Click on each book to explore key thinkers and readings</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Futures Vision Section -->
+  <section id="vision" class="py-12 main-gradient">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Our Communal Vision 🌍
+        </h2>
+        <p class="text-lg text-amber-100 max-w-4xl mx-auto leading-relaxed">
+          At the heart of our spiritual path lies a vision of decentralized, directly democratic, eco communal living—a world where abundance, creativity, and cooperative care replace scarcity, hierarchy, and extraction.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🌞</span>
+            <h3 class="text-2xl font-semibold text-white">Renewable Energy & Gardens</h3>
+          </div>
+          <p class="text-amber-100 text-base">Rooftop gardens and solar panels power our communities with clean energy and fresh food.</p>
+        </div>
+        <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🤝</span>
+            <h3 class="text-2xl font-semibold text-white">Worker Cooperatives</h3>
+          </div>
+          <p class="text-amber-100 text-base">Worker-owned cooperatives and gift economies replace exploitative capitalism.</p>
+        </div>
+        <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🔧</span>
+            <h3 class="text-2xl font-semibold text-white">Communal Technology</h3>
+          </div>
+          <p class="text-amber-100 text-base">Open-source technology, repair cafes, and tool libraries build community resilience.</p>
+        </div>
+        <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-3xl mr-3">🗳️</span>
+            <h3 class="text-2xl font-semibold text-white">Participatory Governance</h3>
+          </div>
+          <p class="text-amber-100 text-base">Circle democracy and mutual accountability guide our collective decisions.</p>
+        </div>
+      </div>
+      <div class="bg-amber-800/70 backdrop-blur-sm rounded-lg p-8 text-center">
+        <p class="text-xl text-amber-100 italic font-medium">
+          "We prefigure liberation today by building it through mutual aid, eco politics, and artistic resistance."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Justice Creed Section -->
+  <section class="py-12 ghibli-forest relative">
+    <div class="absolute inset-0 opacity-20">
+      <div class="floating absolute top-10 left-10 text-3xl">🌿</div>
+      <div class="floating absolute bottom-10 right-10 text-3xl" style="animation-delay: -3s;">✊</div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 relative">
+      <div class="bg-slate-800/90 backdrop-blur-sm rounded-lg p-8 border-4 border-green-400">
+        <h2 class="text-4xl font-bold text-white mb-8">
+          Justice Creed ✊
+        </h2>
+        <div class="space-y-4 text-lg text-green-100">
+          <p>1. Sacredness of all beings</p>
+          <p>2. Justice is practice, not ideal</p>
+          <p>3. No one is disposable</p>
+          <p>4. Earth is our relative</p>
+          <p>5. Name systems of oppression</p>
+          <p>6. Silence in injustice is betrayal</p>
+          <p>7. Intersectionality is seeing truth</p>
+          <p>8. Joy, grief, rage are sacred</p>
+          <p>9. Healing is protest; tenderness is revolutionary</p>
+          <p>10. Wisdom of ancestors; accountability to unborn</p>
+          <p>11. The struggle for justice is holy ground</p>
+          <p>12. I walk this path with courage, humility, and hope</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ethics & FAQ Section -->
+  <section class="py-12 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Living Together, Growing Together ⚖️
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <div>
+          <h3 class="text-2xl font-semibold text-white mb-6">Ethical Commitments</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="text-2xl mr-3">💬</span>
+              <span class="text-gray-300">Respectful communication</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-2xl mr-3">🔄</span>
+              <span class="text-gray-300">Restorative conflict practices</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-2xl mr-3">🕊️</span>
+              <span class="text-gray-300">Nonviolence in community</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-2xl mr-3">🤝</span>
+              <span class="text-gray-300">Active participation</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-2xl mr-3">🌱</span>
+              <span class="text-gray-300">Environmental integrity</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h3>
+          <div class="space-y-4">
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+              <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('political')">
+                <div class="flex items-center justify-between">
+                  <span class="text-white font-medium">Is this too political for a spiritual path?</span>
+                  <span class="text-white" id="political-icon">+</span>
+                </div>
+              </button>
+              <div id="political-content" class="hidden px-4 pb-4">
+                <p class="text-white text-sm">True healing meets struggle. Justice-based spirituality is grounded in liberation.</p>
+              </div>
+            </div>
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+              <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('accessible')">
+                <div class="flex items-center justify-between">
+                  <span class="text-white font-medium">Is this path accessible or too academic?</span>
+                  <span class="text-white" id="accessible-icon">+</span>
+                </div>
+              </button>
+              <div id="accessible-content" class="hidden px-4 pb-4">
+                <p class="text-white text-sm">We translate thinkers through rituals, stories, and shared practice.</p>
+              </div>
+            </div>
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+              <button class="w-full p-4 text-left hover:bg-slate-600 transition-colors" onclick="toggleAccordion('divisive')">
+                <div class="flex items-center justify-between">
+                  <span class="text-white font-medium">Divisive?</span>
+                  <span class="text-white" id="divisive-icon">+</span>
+                </div>
+              </button>
+              <div id="divisive-content" class="hidden px-4 pb-4">
+                <p class="text-white text-sm">No. Intersectionality is how we honor the whole of every person and planet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Our Community Section -->
+  <section class="py-12 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Join Our Community 🤝
+        </h2>
+        <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Ready to walk this path with others? Connect with fellow seekers, join local circles, and build the beloved community together.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
+          <div class="text-4xl mb-4">🌱</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Local Circles</h3>
+          <p class="text-gray-300 text-sm mb-6">Find or start a practice circle in your area for regular gatherings and mutual support.</p>
+          <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
+            Find a Circle
+          </button>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Online Community</h3>
+          <p class="text-gray-300 text-sm mb-6">Join our digital spaces for daily inspiration, discussion, and connection across distances.</p>
+          <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
+            Join Online
+          </button>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6 text-center card-hover">
+          <div class="text-4xl mb-4">📚</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Study Groups</h3>
+          <p class="text-gray-300 text-sm mb-6">Dive deeper into liberation theology and justice spirituality with guided study.</p>
+          <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
+            Start Studying
+          </button>
+        </div>
+      </div>
+      <div class="bg-slate-700 rounded-lg p-8 text-center">
+        <h3 class="text-2xl font-semibold text-white mb-4">Ready to Begin?</h3>
+        <p class="text-gray-300 mb-6">Take the first step on your journey of intersectional justice spirituality.</p>
+        <form class="max-w-md mx-auto space-y-4" onsubmit="handleCommunitySignup(event)">
+          <input type="text" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="Your name" required>
+          <input type="email" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="Your email" required>
+          <select class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded text-white focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" required>
+            <option value="">I'm interested in...</option>
+            <option>Local practice circles</option>
+            <option>Online community</option>
+            <option>Study groups</option>
+            <option>All of the above</option>
+          </select>
+          <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px]">
+            Join the Movement ✊
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog & Reflections Section -->
+  <section id="blog" class="py-12 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-8 playfair">
+          Blog & Reflections 💬
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <!-- Blog Post 1 -->
+        <div class="bg-slate-700 rounded-lg p-6 card-hover">
+          <h3 class="text-xl font-semibold text-white mb-4">Grief as a Sacred Gesture</h3>
+          <p class="text-gray-300 text-sm mb-4">Exploring how grief becomes a pathway to collective healing and justice...</p>
+          <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm" onclick="openBlogModal('grief')">
+            Read More →
+          </button>
+        </div>
+        <!-- Blog Post 2 -->
+        <div class="bg-slate-700 rounded-lg p-6 card-hover">
+          <h3 class="text-xl font-semibold text-white mb-4">Ritual Walks in Spring</h3>
+          <p class="text-gray-300 text-sm mb-4">Connecting with the earth's renewal as a practice of personal and political transformation...</p>
+          <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm" onclick="openBlogModal('ritual')">
+            Read More →
+          </button>
+        </div>
+        <!-- Blog Post 3 -->
+        <div class="bg-slate-700 rounded-lg p-6 card-hover">
+          <h3 class="text-xl font-semibold text-white mb-4">Story Circle: A Trans Liberation Testimony</h3>
+          <p class="text-gray-300 text-sm mb-4">Witnessing the sacred in stories of resistance and transformation...</p>
+          <button class="text-green-400 font-semibold hover:text-green-300 transition-colors text-sm" onclick="openBlogModal('story')">
+            Read More →
+          </button>
+        </div>
+      </div>
+      <div class="bg-slate-700 rounded-lg p-8 text-center">
+        <h3 class="text-2xl font-semibold text-white mb-4">Featured Video</h3>
+        <div class="bg-slate-800 rounded-lg p-8 mb-4">
+          <div class="text-6xl mb-4">🎥</div>
+          <h4 class="text-xl font-semibold text-white mb-2">Introduction to Intersectional Justice Spirituality</h4>
+          <!-- Changed text here -->
+          <p class="text-gray-300 text-sm">A short overview of our path and practices</p>
+        </div>
+        <!-- Replace button with video embed -->
+        <div class="relative" style="padding-top:56.25%"> <!-- 16:9 aspect ratio -->
+          <iframe src="https://drive.google.com/file/d/1ifm_z9tLli92KuvMUXDsTQJQAHMgE9SP/preview" frameborder="0" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-slate-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
+        <div>
+          <div class="text-2xl font-bold mb-4 text-green-400">✊ IJS</div>
+          <p class="text-gray-300 text-sm mb-4">
+            A Revolution of Soul, Society, and Earth
+          </p>
+          <div class="text-sm text-gray-400">
+            @IntersectionalSpirituality
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#home" class="hover:text-green-400 transition-colors">Home</a></li>
+            <li><a href="#beliefs" class="hover:text-green-400 transition-colors">Beliefs</a></li>
+            <li><a href="#resistance" class="hover:text-green-400 transition-colors">Resist</a></li>
+            <li><a href="#practices" class="hover:text-green-400 transition-colors">Practices</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Explore</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#teachings" class="hover:text-green-400 transition-colors">Teachings</a></li>
+            <li><a href="#vision" class="hover:text-green-400 transition-colors">Vision</a></li>
+            <li><a href="#blog" class="hover:text-green-400 transition-colors">Blog</a></li>
+            <li><a href="#footer" class="hover:text-green-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Newsletter</h4>
+          <form class="space-y-3" onsubmit="handleNewsletterSignup(event)">
+            <input type="email" class="w-full px-3 py-3 bg-slate-800 border border-slate-600 rounded text-white text-sm focus:ring-2 focus:ring-green-400 focus:border-transparent min-h-[44px]" placeholder="your@email.com" required>
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px]">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2024 Intersectional Justice Spirituality. All rights reserved.</p>
+        <p class="mt-2">Built with love for justice, healing, and liberation. 🌱</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" id="scrollBtn">
+    🏮
+  </button>
+
+  <!-- Book Modals -->
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBookModal()">&times;</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Blog Post Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content max-h-[90vh] overflow-y-auto">
+      <span class="close" onclick="closeBlogModal()">&times;</span>
+      <div id="blogModalContent" class="mt-4"></div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Scroll to section
+    function scrollToSection(sectionId) {
+      document.querySelector('#' + sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Handle newsletter signup
+    function handleNewsletterSignup(event) {
+      event.preventDefault();
+      const button = event.target.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      button.textContent = 'Subscribed! 🌱';
+      button.classList.add('bg-green-600');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('bg-green-600');
+        event.target.reset();
+      }, 3000);
+    }
+
+    // Handle community signup
+    function handleCommunitySignup(event) {
+      event.preventDefault();
+      const button = event.target.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      button.textContent = 'Welcome to the Movement! ✊';
+      button.classList.add('bg-green-700');
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('bg-green-700');
+        event.target.reset();
+      }, 3000);
+    }
+
+    // Toggle accordions
+    function toggleAccordion(id) {
+      const content = document.getElementById(id + '-content');
+      const icon = document.getElementById(id + '-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '−';
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
+
+    // Open Book Modal
+    function openBookModal(category) {
+      const modal = document.getElementById('bookModal');
+      const content = document.getElementById('modalContent');
+
+      const bookData = {
+        economic: {
+          title: 'Economic Justice',
+          authors: 'Marx, Engels, Lenin',
+          description: 'Foundational texts on class struggle, capitalism critique, and revolutionary theory.',
+          quote: '"The philosophers have only interpreted the world in various ways; the point is to change it." - Marx',
+          books: ['Das Kapital', 'The Communist Manifesto', 'State and Revolution']
+        },
+        black: {
+          title: 'Black Liberation',
+          authors: 'Davis, Coates, Crenshaw',
+          description: 'Critical works on racial justice, intersectionality, and Black freedom movements.',
+          quote: '"Freedom is a constant struggle." - Angela Davis',
+          books: ['Women, Race & Class', 'Between the World and Me', 'Mapping the Margins']
+        },
+        queer: {
+          title: 'Queer & Feminist Thought',
+          authors: 'Lorde, hooks, Butler',
+          description: 'Transformative writings on gender, sexuality, and feminist liberation.',
+          quote: '"The master\'s tools will never dismantle the master\'s house." - Audre Lorde',
+          books: ['Sister Outsider', 'All About Love', 'Gender Trouble']
+        },
+        climate: {
+          title: 'Climate Justice',
+          authors: 'Klein, Nixon, LaDuke',
+          description: 'Essential readings on environmental racism, climate activism, and ecological justice.',
+          quote: '"This changes everything." - Naomi Klein',
+          books: ['This Changes Everything', 'Slow Violence', 'All Our Relations']
+        },
+        indigenous: {
+          title: 'Indigenous Knowledge',
+          authors: 'Deloria Jr., Wynter, Simpson',
+          description: 'Decolonial thought and Indigenous wisdom for healing and transformation.',
+          quote: '"We are not going to save the world. The world is going to save us." - Robin Wall Kimmerer',
+          books: ['God Is Red', 'Being Human as Praxis', 'Dancing on Our Turtle\'s Back']
         }
-        
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
+      };
+      const data = bookData[category];
+      content.innerHTML = `
+        <h2 class="text-2xl font-bold text-white mb-4">${data.title}</h2>
+        <h3 class="text-lg text-green-400 mb-4">Key Thinkers: ${data.authors}</h3>
+        <p class="text-gray-300 mb-4">${data.description}</p>
+        <blockquote class="text-green-300 italic mb-4 border-l-4 border-green-400 pl-4">${data.quote}</blockquote>
+        <h4 class="text-white font-semibold mb-2">Essential Readings:</h4>
+        <ul class="text-gray-300 space-y-1">
+          ${data.books.map(book => `<li>• ${book}</li>`).join('')}
+        </ul>
+      `;
+      modal.style.display = 'block';
+    }
+
+    function closeBookModal() {
+      document.getElementById('bookModal').style.display = 'none';
+    }
+
+    // Blog Post Modal functions
+    function openBlogModal(post) {
+      const modal = document.getElementById('blogModal');
+      const contentDiv = document.getElementById('blogModalContent');
+      if (post === 'grief') {
+        contentDiv.innerHTML = `
+          <h2 class="text-2xl font-bold text-white mb-4">Grief as a Sacred Gesture</h2>
+          <p class="mb-4">Exploring how grief becomes a pathway to collective healing and justice. Grief is the garden where justice grows. In our tradition, grief is a sacred act that unites community in shared mourning and collective transformation. It invites us to honor loss and build resilience together. This act of sacred mourning is rooted in divine mercy and communal love. When we embrace grief as sacred, it becomes a revolutionary act that fuels our commitment to justice and healing.</p>
+        `;
+      } else if (post === 'ritual') {
+        contentDiv.innerHTML = `
+          <h2 class="text-2xl font-bold text-white mb-4">Ritual Walks in Spring</h2>
+          <p class="mb-4">Connecting with the Earth’s renewal as a practice of personal and political transformation. Before the walk, set an intention, carry a meaningful object, and recite a justice affirmation. During the walk, move in silence, sync with your breath. Afterward, journal and offer thanks. These rituals reconnect us with land, body, and spirit, honoring the sacred cycles of nature and justice. Walking in this way resists the speed of capitalism and affirms our collective resilience.</p>
+        `;
+      } else if (post === 'story') {
+        contentDiv.innerHTML = `
+          <h2 class="text-2xl font-bold text-white mb-4">Story Circle: A Trans Liberation Testimony</h2>
+          <p class="mb-4">Witnessing the sacred in stories of resistance and transformation. "My name is Zion (they/them). I came to the story circle unsure if my story belonged. But I remembered — if our faith doesn’t make room for trans stories, then it’s not a liberating faith. I spoke: 'I am trans, Black, and healing...'." This testimony affirms that storytelling is a sacred act that challenges oppression and nurtures collective liberation. Creating space for trans stories is a revolutionary act rooted in love, truth, and ancestral resilience.</p>
+        `;
+      }
+      document.getElementById('blogModal').style.display = 'block';
+    }
+
+    function closeBlogModal() {
+      document.getElementById('blogModal').style.display = 'none';
+    }
+
+    // Show/hide scroll to top button
+    window.onscroll = function() {
+      const scrollBtn = document.getElementById('scrollBtn');
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = 'block';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    };
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('bookModal');
+      const blogModal = document.getElementById('blogModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+      if (event.target == blogModal) {
+        closeBlogModal();
+      }
+    };
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
         }
-        
-        function handleNewsletterSignup(event) {
-            event.preventDefault();
-            const button = event.target.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            button.textContent = 'Subscribed! 🌱';
-            button.classList.add('bg-green-600');
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.classList.remove('bg-green-600');
-                event.target.reset();
-            }, 3000);
-        }
-        
-        function handleCommunitySignup(event) {
-            event.preventDefault();
-            const button = event.target.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            button.textContent = 'Welcome to the Movement! ✊';
-            button.classList.add('bg-green-700');
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.classList.remove('bg-green-700');
-                event.target.reset();
-            }, 3000);
-        }
-        
-        function toggleAccordion(id) {
-            const content = document.getElementById(id + '-content');
-            const icon = document.getElementById(id + '-icon');
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.textContent = '−';
-            } else {
-                content.classList.add('hidden');
-                icon.textContent = '+';
-            }
-        }
-        
-        function openBookModal(category) {
-            const modal = document.getElementById('bookModal');
-            const content = document.getElementById('modalContent');
-            
-            const bookData = {
-                economic: {
-                    title: 'Economic Justice',
-                    authors: 'Marx, Engels, Lenin',
-                    description: 'Foundational texts on class struggle, capitalism critique, and revolutionary theory.',
-                    quote: '"The philosophers have only interpreted the world in various ways; the point is to change it." - Marx',
-                    books: ['Das Kapital', 'The Communist Manifesto', 'State and Revolution']
-                },
-                black: {
-                    title: 'Black Liberation',
-                    authors: 'Davis, Coates, Crenshaw',
-                    description: 'Critical works on racial justice, intersectionality, and Black freedom movements.',
-                    quote: '"Freedom is a constant struggle." - Angela Davis',
-                    books: ['Women, Race & Class', 'Between the World and Me', 'Mapping the Margins']
-                },
-                queer: {
-                    title: 'Queer & Feminist Thought',
-                    authors: 'Lorde, hooks, Butler',
-                    description: 'Transformative writings on gender, sexuality, and feminist liberation.',
-                    quote: '"The master\'s tools will never dismantle the master\'s house." - Audre Lorde',
-                    books: ['Sister Outsider', 'All About Love', 'Gender Trouble']
-                },
-                climate: {
-                    title: 'Climate Justice',
-                    authors: 'Klein, Nixon, LaDuke',
-                    description: 'Essential readings on environmental racism, climate activism, and ecological justice.',
-                    quote: '"This changes everything." - Naomi Klein',
-                    books: ['This Changes Everything', 'Slow Violence', 'All Our Relations']
-                },
-                indigenous: {
-                    title: 'Indigenous Knowledge',
-                    authors: 'Deloria Jr., Wynter, Simpson',
-                    description: 'Decolonial thought and Indigenous wisdom for healing and transformation.',
-                    quote: '"We are not going to save the world. The world is going to save us." - Robin Wall Kimmerer',
-                    books: ['God Is Red', 'Being Human as Praxis', 'Dancing on Our Turtle\'s Back']
-                }
-            };
-            const data = bookData[category];
-            content.innerHTML = `
-                <h2 class="text-2xl font-bold text-white mb-4">${data.title}</h2>
-                <h3 class="text-lg text-green-400 mb-4">Key Thinkers: ${data.authors}</h3>
-                <p class="text-gray-300 mb-4">${data.description}</p>
-                <blockquote class="text-green-300 italic mb-4 border-l-4 border-green-400 pl-4">${data.quote}</blockquote>
-                <h4 class="text-white font-semibold mb-2">Essential Readings:</h4>
-                <ul class="text-gray-300 space-y-1">
-                    ${data.books.map(book => `<li>• ${book}</li>`).join('')}
-                </ul>
-            `;
-            modal.style.display = 'block';
-        }
-        
-        function closeBookModal() {
-            document.getElementById('bookModal').style.display = 'none';
-        }
-        
-        function closeVideoModal() {
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = "";
-            document.getElementById('videoModal').style.display = 'none';
-        }
-        // Removed the previous playVideo() function as we embed the video directly now
-        
-        // Show/hide scroll to top button
-        window.onscroll = function() {
-            const scrollBtn = document.getElementById('scrollBtn');
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = 'block';
-            } else {
-                scrollBtn.style.display = 'none';
-            }
-        };
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('bookModal');
-            const videoModal = document.getElementById('videoModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-            if (event.target == videoModal) {
-                closeVideoModal();
-            }
-        };
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
