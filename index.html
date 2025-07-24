@@ -379,7 +379,7 @@
             <li>• Grief and joy rituals</li>
             <li>• Liberation reading</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center download-btn">
+          <a href="https://drive.google.com/uc?export=download&id=1cGGvucxpcvbXvVRc1sewOD_TLoSqsZXD" target="_blank" rel="noopener noreferrer" class="download-btn bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
             📄 Download PDF Guide
           </a>
         </div>
@@ -395,7 +395,7 @@
             <li>• Shared contemplative practice</li>
             <li>• Household liberation discussions</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center download-btn">
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="download-btn bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm min-h-[44px] flex items-center justify-center">
             📄 Download PDF Guide
           </a>
         </div>
@@ -411,7 +411,7 @@
             <li>• Collective healing ceremonies</li>
             <li>• Action planning rituals</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center download-btn">
+          <a href="https://drive.google.com/uc?export=download&id=1wUevfUkjjDAtQbfjvabK40QYqPAYOziI" target="_blank" rel="noopener noreferrer" class="download-btn bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
             📄 Download PDF Guide
           </a>
         </div>
@@ -427,7 +427,7 @@
             <li>• Mutual aid days</li>
             <li>• Community healing circles</li>
           </ul>
-          <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center download-btn">
+          <a href="https://drive.google.com/uc?export=download&id=1nh47rxlZFLlyZPtxQGzp5tZhjdbkCQtp" target="_blank" rel="noopener noreferrer" class="download-btn bg-green-800 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center">
             📄 Download PDF Guide
           </a>
         </div>
@@ -1033,6 +1033,98 @@
 
     // Example: no additional code needed for PDF download links as they are unchanged
 
+    // Apply the new color to all elements with class 'download-btn'
+    document.addEventListener('DOMContentLoaded', () => {
+      // We want to match the 'Read More' buttons in the 'Our Beliefs' section
+      // and the "Download PDF Guide" buttons in the 'Living the Path' section
+      // The 'Read More' buttons in beliefs have no specific class, but their class is consistent
+      // and the "Download PDF Guide" buttons have class 'download-btn'.
+      
+      // First, define the target color, matching the "Read More" buttons of the "Our Beliefs" section.
+      // Let's find the "Read More" buttons in the beliefs section:
+      
+      const readMoreButtons = document.querySelectorAll('section#beliefs button');
+      // For safety, filter buttons with text "Read More"
+      readMoreButtons.forEach(btn => {
+        if (btn.textContent.trim() === 'Read More') {
+          // Get the current background color
+          // We want to match the "Read More" buttons' hover color, which is 'hover:bg-green-700'
+          // Tailwind's 'bg-green-600' with hover 'bg-green-700'
+          // So let's apply 'bg-green-600' as the new color
+          
+          btn.classList.remove('bg-green-600');
+          btn.classList.remove('hover:bg-green-700');
+          
+          // Instead, set the background color directly and hover
+          // We can do this by adding inline styles or Tailwind classes
+          
+          // Use inline style for background color
+          btn.style.backgroundColor = '#059669'; // Tailwind 'green-600'
+          
+          // For hover effect, add a class that changes background on hover
+          // Since we cannot dynamically add Tailwind hover classes easily, add a class that applies the hover color
+          
+          // Create a new class for hover if needed
+          
+          // But for simplicity, add a class with inline style for hover using CSS
+          
+          // Instead, to keep code simple, just add a class
+          
+          // Let's add a class 'match-readmore' with background color #059669 and hover #047857 (green-700)
+          
+          // Append style in CSS:
+          
+        }
+      });
+      
+      // For the "Download PDF Guide" buttons, we want to change their background color to match the "read more" buttons
+      const downloadButtons = document.querySelectorAll('.download-btn');
+      
+      downloadButtons.forEach(btn => {
+        // Remove existing background classes
+        // and set background color to match the "Read More" buttons
+        btn.classList.remove('bg-green-800');
+        // Apply new class
+        // Instead of classes, set style directly
+        btn.style.backgroundColor = '#059669'; // Tailwind 'green-600'
+        // For hover, add a class for hover background
+        // But since the hover is handled via Tailwind, to override, we can add inline style for hover using CSS
+        // For simplicity, add a class
+      });
+      
+      // To fully implement, define a CSS rule for the new class
+    });
+  </script>
+  <style>
+    /* Additional styles for matching buttons */
+    /* Define class for the "Read More" buttons in Beliefs section */
+    .match-readmore {
+      background-color: #059669 !important; /* Tailwind green-600 */
+    }
+    /* For hover effect, we can use Tailwind's hover:bg-green-700, but since we're doing inline styles, override hover as well if necessary */
+    /* Alternatively, define hover style in CSS */
+    .match-readmore:hover {
+      background-color: #047857 !important; /* Tailwind green-700 */
+    }
+  </style>
+  <script>
+    // Apply the new color to all relevant buttons after DOM loads
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all "Read More" buttons in Beliefs section
+      const readMoreBtns = document.querySelectorAll('section#beliefs button');
+      readMoreBtns.forEach(btn => {
+        if (btn.textContent.trim() === 'Read More') {
+          btn.classList.add('match-readmore');
+        }
+      });
+      
+      // Select all download PDF guide buttons
+      const downloadBtns = document.querySelectorAll('.download-btn');
+      downloadBtns.forEach(btn => {
+        btn.classList.remove('bg-green-800');
+        btn.classList.add('match-readmore');
+      });
+    });
   </script>
 </body>
 </html>
